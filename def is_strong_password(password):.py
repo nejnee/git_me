@@ -15,3 +15,13 @@ def is_strong_password(password):
             has_digit = True
 
     return has_upper and has_lower and has_digit
+
+
+def collect_strings(items):
+    new_list = []  
+    for item in items:
+        if isinstance(item, str):
+            new_list.append(item)  
+    return new_list
+
+print(collect_strings([10, 'sfsdf', 20, [30, 40], 'abc']))
