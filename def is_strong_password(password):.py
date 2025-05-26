@@ -25,3 +25,4 @@ def collect_strings(items):
     return new_list
 
 print(collect_strings([10, 'sfsdf', 20, [30, 40], 'abc']))
+print(collect_strings([10, 'sfsdf', 'abc']))
