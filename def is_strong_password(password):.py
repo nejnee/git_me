@@ -26,3 +26,31 @@ def collect_strings(items):
 
 print(collect_strings([10, 'sfsdf', 20, [30, 40], 'abc']))
 print(collect_strings([10, 'sfsdf', 'abc']))
+
+
+
+def merge_schedules(schedule1, schedule2):
+    merged = {}
+
+    for day, tasks in schedule1.items():
+        merged[day] = tasks.copy()
+
+    for day, tasks in schedule2.items():
+        if day in merged:
+            merged[day].extend(tasks) 
+        else:
+            merged[day] = tasks.copy()
+    
+    return merged
+
+main_schedule = {
+    'Понедельник': ['почитать', 'сходить на йогу'],
+    'Вторник': ['занятие по грузинскому']
+}
+
+extra_tasks = {
+    'Понедельник': ['купить продукты'],
+    'Среда': ['посмотреть лекцию']
+}
+
+print(merge_schedules(main_schedule, extra_tasks))
