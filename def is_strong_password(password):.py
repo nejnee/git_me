@@ -54,3 +54,14 @@ extra_tasks = {
 }
 
 print(merge_schedules(main_schedule, extra_tasks))
+
+def remove_odds(numbers):
+    new_list = []
+    for num in numbers:
+        if num == 0:
+            continue
+        if num % 2 == 0:
+            new_list.append(num)
+    return new_list
+
+print(remove_odds([1, 2, 3, 4, 5, 6]))
