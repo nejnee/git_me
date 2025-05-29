@@ -55,6 +55,7 @@ extra_tasks = {
 
 print(merge_schedules(main_schedule, extra_tasks))
 
+<<<<<<< HEAD
 def remove_odds(numbers):
     new_list = []
     for num in numbers:
@@ -65,6 +66,8 @@ def remove_odds(numbers):
     return new_list
 
 print(remove_odds([1, 2, 3, 4, 5, 6]))
+=======
+>>>>>>> d0adbee (added smth new)
 
 # Участники соревнований в разные дни
 day1 = ["Alice", "Bob", "Charlie", "Diana", "Eva"]
@@ -93,3 +96,7 @@ print("Все ли участники первого дня были во вто
 # 5. Общее количество уникальных участников
 print("Общее количество уникальных участников:", len(all_participants))
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0adbee (added smth new)
