@@ -95,3 +95,20 @@ print("Все ли участники первого дня были во вто
 
 # 5. Общее количество уникальных участников
 print("Общее количество уникальных участников:", len(all_participants))
+
+
+robototechnics = ["Anna", "Boris", "Dina", "Egor", "Fedor"]
+programming = ["Dina", "Egor", "Gleb", "Hana", "Ivan"]
+mathematics = ["Anna", "Gleb", "Ivan", "Julia"]
+
+
+set_rbt = set(robototechnics)
+set_prg = set(programming)
+set_mth = set(mathematics)
+
+only_one = (
+    (set_rbt - set_prg - set_mth) |
+    (set_prg - set_rbt - set_mth) |
+    (set_mth - set_rbt - set_prg)
+)
+print("Ходят только в один кружок:", only_one)
