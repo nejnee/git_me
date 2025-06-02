@@ -112,3 +112,21 @@ only_one = (
     (set_mth - set_rbt - set_prg)
 )
 print("Ходят только в один кружок:", only_one)
+
+
+from datetime import datetime
+
+birthdays = ["14.03.1990", "01.01.2000", "25.12.1985"]
+today = datetime.today()
+
+def calculate_age(birth_str):
+    birth = datetime.strptime(birth_str, "%d.%m.%Y")
+    years = today.year - birth.year
+    if (today.month, today.day) < (birth.month, birth.day):
+        years -= 1
+    return years
+
+sorted_birthdays = sorted(birthdays, key=lambda d: calculate_age(d))
+
+for b in sorted_birthdays:
+    print(f"{b} — {calculate_age(b)} лет")
