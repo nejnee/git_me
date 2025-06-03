@@ -130,3 +130,29 @@ sorted_birthdays = sorted(birthdays, key=lambda d: calculate_age(d))
 
 for b in sorted_birthdays:
     print(f"{b} — {calculate_age(b)} лет")
+
+
+def calculator():
+    try:
+        a = float(input("Введите первое число: "))
+        b = float(input("Введите второе число: "))
+        op = input("Введите операцию (+, -, *, /): ")
+
+        if op == '+':
+            result = a + b
+        elif op == '-':
+            result = a - b
+        elif op == '*':
+            result = a * b
+        elif op == '/':
+            result = a / b
+        else:
+            raise ValueError("Неверная операция!")
+
+    except ValueError as e:
+        print("Ошибка:", e)
+    except ZeroDivisionError:
+        print("Ошибка: деление на ноль запрещено!")
+    else:
+        print("Результат:", result)
+
