@@ -156,3 +156,12 @@ def calculator():
     else:
         print("Результат:", result)
 
+import random
+
+participants = list(range(1, 101))
+winners = random.sample(participants, 6)
+super_winner = winners[0]
+other_winners = sorted(winners[1:])
+
+print("Суперпобедитель:", super_winner)
+print("Остальные победители:", other_winners)
