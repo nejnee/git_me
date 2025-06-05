@@ -165,3 +165,20 @@ other_winners = sorted(winners[1:])
 
 print("Суперпобедитель:", super_winner)
 print("Остальные победители:", other_winners)
+
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def info(self):
+        return f"«{self.title}», автор: {self.author}, год: {self.year}"
+
+
+book1 = Book("Мастер и Маргарита", "Михаил Булгаков", 1967)
+book2 = Book("1984", "Джордж Оруэлл", 1949)
+
+print(book1.info())
+print(book2.info())
