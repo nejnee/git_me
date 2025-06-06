@@ -182,3 +182,37 @@ book2 = Book("1984", "Джордж Оруэлл", 1949)
 
 print(book1.info())
 print(book2.info())
+
+
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+        self.history = []
+
+    def deposit(self, amount):
+        self.balance += amount
+        self.history.append(f"Пополнение: +{amount}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            self.history.append(f"Снятие: -{amount}")
+        else:
+            self.history.append("Снятие: недостаточно средств")
+
+    def get_balance(self):
+        return self.balance
+
+    def get_history(self):
+        return self.history
+
+
+acc = BankAccount("Анна", 1000)
+acc.deposit(500)
+acc.withdraw(200)
+acc.withdraw(2000)
+print("Баланс:", acc.get_balance())
+print("История операций:")
+for h in acc.get_history():
+    print(h)
